@@ -1,0 +1,15 @@
+{
+    "name": "stURLizer",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "icons": {
+        "48": "images/icon48.png"
+      },
+    "permissions": ["activeTab", "scripting", "clipboardRead", "clipboardWrite"],
+    "action": {
+      "default_title": "stURLize the current browser location"
+    }
+}
