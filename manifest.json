@@ -1,15 +1,19 @@
 {
-    "name": "stURLizer",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "js/background.js"
-    },
-    "icons": {
-        "48": "images/icon48.png"
-      },
-    "permissions": ["activeTab", "scripting", "clipboardRead", "clipboardWrite"],
-    "action": {
-      "default_title": "stURLize the current browser location"
-    }
+  "name": "stURLizer",
+  "version": "1.0",
+  "description": "A chrome extension for copying the window url to the clipboard without fingerprinting or query parameters",
+  "manifest_version": 3,
+  "background": {
+      "service_worker": "js/background.js"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": ["activeTab", "scripting", "clipboardRead", "clipboardWrite"],
+  "action": {
+    "default_title": "stURLize the current browser location"
+  }
 }
