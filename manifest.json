@@ -12,11 +12,11 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "permissions": ["activeTab", "scripting", "contextMenus", "clipboardWrite"],
+  "permissions": ["activeTab", "scripting", "contextMenus"],
     "content_scripts": [
       {
        "matches": ["<all_urls>"],
-       "js": ["js/content.js", "js/linkToClipboard.js","js/pageToClipboard.js"]
+       "js": ["js/content.js", "js/linkToClipboard.js"]
       }
    ],
   "action": {
