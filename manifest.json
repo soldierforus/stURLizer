@@ -1,7 +1,7 @@
 {
   "name": "stURLizer",
-  "version": "1.0",
-  "description": "A chrome extension for copying the window url to the clipboard without fingerprinting or query parameters",
+  "version": "1.3.0",
+  "description": "A chrome extension for copying urls to the clipboard without parameters",
   "manifest_version": 3,
   "background": {
       "service_worker": "js/background.js"
