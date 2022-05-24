@@ -13,6 +13,12 @@
     "128": "images/icon128.png"
   },
   "permissions": ["activeTab", "scripting", "contextMenus", "clipboardWrite"],
+    "content_scripts": [
+      {
+       "matches": ["<all_urls>"],
+       "js": ["js/content.js", "js/linkToClipboard.js","js/pageToClipboard.js"]
+      }
+   ],
   "action": {
     "default_title": "stURLize the current browser location"
   }
