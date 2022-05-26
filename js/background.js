@@ -19,10 +19,10 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 function getSterilizedUrl(url) { 
+  //get the current url and remove the params
   let diseasedUrl = '';
   let sterilizedUrl = '';
   
-  //get the current url and remove the params
   diseasedUrl = url;
   sterilizedUrl = diseasedUrl.split('?')[0];
   return sterilizedUrl
@@ -38,7 +38,7 @@ function copyToClipboard(sterilizedUrl) {
   navigator.clipboard.write(data);
 }
 
-// background.js
+// inject content.js when extension icon is clicked
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
