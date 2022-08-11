@@ -18,7 +18,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-// background.js
+// inject content.js when extension icon is clicked
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: {tabId: tab.id},
