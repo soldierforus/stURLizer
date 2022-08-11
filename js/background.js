@@ -18,26 +18,6 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-function getSterilizedUrl(url) { 
-  let diseasedUrl = '';
-  let sterilizedUrl = '';
-  
-  //get the current url and remove the params
-  diseasedUrl = url;
-  sterilizedUrl = diseasedUrl.split('?')[0];
-  return sterilizedUrl
-}
-
-function copyToClipboard(sterilizedUrl) {
-  //create the data to be written to the the clipboard
-  const type = "text/plain";
-  const blob = new Blob([sterilizedUrl], { type });
-  const data = [new ClipboardItem({ [type]: blob })];
-  
-  //write to the clipboard
-  navigator.clipboard.write(data);
-}
-
 // background.js
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
