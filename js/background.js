@@ -52,7 +52,12 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         
         //operate on fb links
         if ( diseasedUrl.startsWith('https://l.facebook.com')) {
-          sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm')));
+          if (diseasedUrl.includes('fbclid')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('fbclid'))).split('?')[0];
+          }
+          else if (diseasedUrl.includes('utm')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm'))).split('?')[0];
+          }         
         } else {
           sterilizedUrl = diseasedUrl.split('?')[0];
         }

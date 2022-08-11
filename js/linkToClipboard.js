@@ -6,13 +6,18 @@ chrome.runtime.onMessage.addListener(
           let diseasedUrl = request.textToCopy;
           let sterilizedUrl = '';
 
-            //operate on fb links
-            if ( diseasedUrl.startsWith('https://l.facebook.com')) {
-              sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm')));
-            } else {
-              sterilizedUrl = diseasedUrl.split('?')[0];
-            }
-          copyToClipboard(sterilizedUrl);
+        //operate on fb links
+        if ( diseasedUrl.startsWith('https://l.facebook.com')) {
+          if (diseasedUrl.includes('fbclid')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('fbclid'))).split('?')[0];
+          }
+          else if (diseasedUrl.includes('utm')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm'))).split('?')[0];
+          }         
+        } else {
+          sterilizedUrl = diseasedUrl.split('?')[0];
+        }
+            copyToClipboard(sterilizedUrl);
         }
     }
 );
