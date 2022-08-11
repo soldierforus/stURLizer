@@ -1,6 +1,6 @@
 {
   "name": "stURLizer",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "A chrome extension for copying urls to the clipboard without parameters",
   "manifest_version": 3,
   "background": {
