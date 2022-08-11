@@ -25,7 +25,7 @@ chrome.action.onClicked.addListener((tab) => {
     files: ['js/content.js']
   });
 });
-  
+
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   switch (info.menuItemId) {
     case "linkToClipboard":
@@ -43,10 +43,25 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       });
     break;
     case "linkToTab":
-      getSterilizedUrl(info.linkUrl);
-      chrome.tabs.create({  
+      //get the current url and remove the params
+      function getSterilizedUrl(url) { 
+        let diseasedUrl = '';
+        let sterilizedUrl = '';
+       
+        diseasedUrl = url;
+        
+        //operate on fb links
+        if ( diseasedUrl.startsWith('https://l.facebook.com')) {
+          sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm')));
+        } else {
+          sterilizedUrl = diseasedUrl.split('?')[0];
+        }
+        return sterilizedUrl
+      }
+     //open new tab using the sterilized link
+     chrome.tabs.create({  
         url: getSterilizedUrl(info.linkUrl)
-      });
+     });
     break;
     case "pageToClipboard":
       chrome.scripting.executeScript({
