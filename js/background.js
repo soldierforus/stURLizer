@@ -18,6 +18,15 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+//listen for hotkey ctrl+shift+z
+chrome.commands.onCommand.addListener((command, tab) => {
+  console.log(`Command "${command}" triggered`);
+  chrome.scripting.executeScript({
+    target: {tabId: tab.id},
+    files: ['js/content.js']
+  });
+});
+
 // inject content.js when extension icon is clicked
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
@@ -64,7 +73,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         return sterilizedUrl
       }
      //open new tab using the sterilized link
-     chrome.tabs.create({  
+     chrome.tabs.create({
         url: getSterilizedUrl(info.linkUrl)
      });
     break;
