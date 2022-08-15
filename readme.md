@@ -1,5 +1,5 @@
 # stTURLizer
-### a chrome extension
+### a chrome extension to rid query parameters from page urls and links and copy them to the clipboard or open the cleaned link in a new tab
 
 
 
