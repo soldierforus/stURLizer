@@ -1,14 +1,14 @@
 # stTURLizer
-### a chrome extension to rid query parameters from page URLs and links, copy them to the clipboard, or open the cleaned link in a new tab<br/><br/>
+### a chrome extension to rid query parameters from page URLs and links, copy them to the clipboard, or open the cleaned link in a new tab<br/><br/><br/>
 
 
 ## Install
-stURLizer can be installed from the chrome store: https://chrome.google.com/webstore/detail/sturlizer/lmnmhjhlhkdfnfnmnaceipkdegjilpal<br/><br/>
+stURLizer can be installed from the chrome store: https://chrome.google.com/webstore/detail/sturlizer/lmnmhjhlhkdfnfnmnaceipkdegjilpal<br/><br/><br/>
 
 
 
 ## Shortcuts
-`Ctrl+Shift+Z` to stURLize current page url and copy to clipboard<br/><br/>
+`Ctrl+Shift+Z` to stURLize current page url and copy to clipboard<br/><br/><br/>
 
 
 
@@ -26,7 +26,7 @@ Works with facebook!  Right click a post and opening in a new tab using stURLize
 
 
 **AFTER:**<br/>
-  "https://www3.forbes.com/business/states-with-the-best-public-school-systems"<br/><br/>
+  "https://www3.forbes.com/business/states-with-the-best-public-school-systems"<br/><br/><br/>
 
 
 ## Privacy
