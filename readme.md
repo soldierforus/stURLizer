@@ -24,21 +24,7 @@ Works with facebook!  Right click a post and opening in a new tab using stURLize
 
 BEFORE: 
  
-   "href="https://l.facebook.com/l.php? 
-   u=https%3A%2F%2Fwww3.forbes.com%2Fbusiness%2Fstates-with-the-best-public-school- 
-   systems%3Futm_campaign%3DStates-With-The-Best-Public- 
-   School%253Futm_campaign%253DStates-With-The-Best-Public- 
-   School%26utm_source%3DFB%26utm_medium%3Dfb141322d0us507082206%26lcid%3Dfb141 
-   322d0us507082206%26fbclid%3DIwAR1ehN8j2Xll4OHj4o6EP1og- 
-   JbJlpAIdHJZ0auN_9NwoSIoCwKEKuKs__c&h=AT0lDTJmmou5fScm-9pzj0_s66- 
-   C08GGYWdlyL7XH7YxdvG4tY3c2PvqXfJ5vFKLtdH- 
-   qH6JkGiCbqhNh587YVjz7rPaHG7sqhMtn_Q_SHqI_phUG00iTlNdNPQ&__tn__=%2CmH- 
-   R&c[0]=AT2bN3ZfUR_f61wdieV2vD5ZlVAQXMTuk7R8BT4f- 
-   HdToYZxRaY0DSQlc15_rCTYVrjxCSHoW7cavhRtgjyKjU7i6sXK6LybPPYHdkP1- 
-   MkRx4g6AYJhDHYdtTH8YbYZpojMOe8ZfmXV1mvRvt_YhbP7QFlrgEF30azmP0zpXA- 
-   jT89zjMmCIGWsMsO3BDN_0Ai187gS6X25ZWNl2BYaKdrWYcWz- 
-   mOQM4HxWvTL8BbJUR3mO3hoWcVYFM5M1O67J48SouHxF_hcqp-fbZsGE- 
-   DzeDKYZLNIm1_1uk9kojykBEeyiXvZPZ3BQCMBOXPIkWlChsg"
+   "href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww3.forbes.com%2Fbusiness%2Fstates-with-the-best-public-school-systems%3Futm_campaign%3DStates-With-The-Best-Public-School%253Futm_campaign%253DStates-With-The-Best-Public-School%26utm_source%3DFB%26utm_medium%3Dfb141322d0us507082206%26lcid%3Dfb141322d0us507082206%26fbclid%3DIwAR1ehN8j2Xll4OHj4o6EP1og-JbJlpAIdHJZ0auN_9NwoSIoCwKEKuKs__c&h=AT0lDTJmmou5fScm-9pzj0_s66-C08GGYWdlyL7XH7YxdvG4tY3c2PvqXfJ5vFKLtdH-qH6JkGiCbqhNh587YVjz7rPaHG7sqhMtn_Q_SHqI_phUG00iTlNdNPQ&__tn__=%2CmH-R&c[0]=AT2bN3ZfUR_f61wdieV2vD5ZlVAQXMTuk7R8BT4f-HdToYZxRaY0DSQlc15_rCTYVrjxCSHoW7cavhRtgjyKjU7i6sXK6LybPPYHdkP1-MkRx4g6AYJhDHYdtTH8YbYZpojMOe8ZfmXV1mvRvt_YhbP7QFlrgEF30azmP0zpXA-jT89zjMmCIGWsMsO3BDN_0Ai187gS6X25ZWNl2BYaKdrWYcWz-mOQM4HxWvTL8BbJUR3mO3hoWcVYFM5M1O67J48SouHxF_hcqp-fbZsGE-DzeDKYZLNIm1_1uk9kojykBEeyiXvZPZ3BQCMBOXPIkWlChsg"
 
 
 AFTER: 
