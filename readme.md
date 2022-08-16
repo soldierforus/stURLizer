@@ -4,7 +4,7 @@
 
 
 ## Install
-stURLizer does not have ads or share user's data. It is fully open-source: https://github.com/soldierforus/stURLizer
+stURLizer can be installed from the chrome store: https://chrome.google.com/webstore/detail/sturlizer/lmnmhjhlhkdfnfnmnaceipkdegjilpal
 
 
 
@@ -32,4 +32,5 @@ AFTER:
   "https://www3.forbes.com/business/states-with-the-best-public-school-systems"
 
 
+## Privacy
 stURLizer does not have ads or share user's data. It is fully open-source: https://github.com/soldierforus/stURLizer
