@@ -1,7 +1,7 @@
 {
   "name": "stURLizer",
   "version": "2.1.0",
-  "description": "A chrome extension for opening cleaned links in a new tab and copying URLs to the clipboard without parameters",
+  "description": "Rid query parameters from page URLs and links, copy them to the clipboard, or open the cleaned link in a new tab",
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
