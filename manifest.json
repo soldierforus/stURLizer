@@ -1,7 +1,7 @@
 {
   "name": "stURLizer",
   "version": "2.1.0",
-  "description": "A chrome extension for copying urls to the clipboard without parameters",
+  "description": "A chrome extension for opening cleaned links in a new tab and copying URLs to the clipboard without parameters",
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
@@ -22,7 +22,7 @@
         "default": "Ctrl+Shift+Z",
         "mac": "Command+Shift+Z"
       },
-      "description": "Run \"foo\" on the current page."
+      "description": "stURLize the page URL and copy to the clipboard"
     },
     "_execute_action": {
       "suggested_key": {
