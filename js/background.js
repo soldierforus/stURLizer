@@ -59,15 +59,33 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
        
         diseasedUrl = url;
         
-        //operate on fb links
-        if ( diseasedUrl.startsWith('https://l.facebook.com')) {
-          if (diseasedUrl.includes('fbclid')) {
-            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('fbclid'))).split('?')[0];
+        if (diseasedUrl.includes('utm' && 'https:%')) {
+          if (!diseasedUrl.startsWith('https://l.facebook.com')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https:%'), diseasedUrl.indexOf('utm'))).split('?')[0];
           }
-          else if (diseasedUrl.includes('utm')) {
+        }
+        
+        if (!diseasedUrl.includes('utm') && diseasedUrl.includes('https:%')) {
+          if (!diseasedUrl.startsWith('https://l.facebook.com')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https:%')));
+          }
+        }
+        
+        //operate on fb links
+        else if ( diseasedUrl.startsWith('https://l.facebook.com')) {
+          if (diseasedUrl.includes('fbclid' && 'https%')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('fbclid'))).split('?')[0];
+          } else if (diseasedUrl.includes('utm' && 'https%')) {
             sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https%'), diseasedUrl.indexOf('utm'))).split('?')[0];
-          }         
-        } else {
+          } else if (diseasedUrl.includes('fbclid' && 'http%')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('http%'), diseasedUrl.indexOf('fbclid'))).split('?')[0];
+          }
+          else if (diseasedUrl.includes('utm' && 'http%')) {
+            sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('http%'), diseasedUrl.indexOf('utm'))).split('?')[0];
+          }
+        } 
+        
+        else {
           sterilizedUrl = diseasedUrl.split('?')[0];
         }
         return sterilizedUrl

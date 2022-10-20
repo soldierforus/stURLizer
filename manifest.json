@@ -1,6 +1,6 @@
 {
   "name": "stURLizer",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Rid query parameters from page URLs and links, copy them to the clipboard, or open the cleaned link in a new tab",
   "manifest_version": 3,
   "background": {
@@ -19,17 +19,17 @@
   "commands": {
     "copy": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Z",
-        "mac": "Command+Shift+Z"
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
       },
       "description": "stURLize the page URL and copy to the clipboard"
     },
     "_execute_action": {
       "suggested_key": {
-        "windows": "Ctrl+Shift+Z",
-        "mac": "Command+Shift+Z",
-        "chromeos": "Ctrl+Shift+Z",
-        "linux": "Ctrl+Shift+Z"
+        "windows": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H",
+        "chromeos": "Ctrl+Shift+H",
+        "linux": "Ctrl+Shift+H"
       }
     }
   }

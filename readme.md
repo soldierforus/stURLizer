@@ -8,7 +8,7 @@ stURLizer can be installed from the chrome store: https://chrome.google.com/webs
 
 
 ## Shortcuts
-`Ctrl+Shift+Z` to stURLize current page url and copy to clipboard<br/><br/><br/>
+`Ctrl+Shift+H` to stURLize current page url and copy to clipboard<br/><br/><br/>
 
 
 
