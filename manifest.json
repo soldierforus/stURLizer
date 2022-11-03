@@ -20,14 +20,14 @@
     "copy": {
       "suggested_key": {
         "default": "Ctrl+Shift+H",
-        "mac": "Command+Shift+F"
+        "mac": "Command+Shift+Z"
       },
       "description": "stURLize the page URL and copy to the clipboard"
     },
     "_execute_action": {
       "suggested_key": {
         "windows": "Ctrl+Shift+H",
-        "mac": "Command+Shift+F",
+        "mac": "Command+Shift+Z",
         "chromeos": "Ctrl+Shift+H",
         "linux": "Ctrl+Shift+H"
       }
