@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(
             }
           }
           
-          if (!diseasedUrl.includes('utm') && diseasedUrl.includes('https:%')) {
+          else if (!diseasedUrl.includes('utm') && diseasedUrl.includes('https:%')) {
             if (!diseasedUrl.startsWith('https://l.facebook.com')) {
               sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https:%')));
             }
@@ -30,14 +30,12 @@ chrome.runtime.onMessage.addListener(
           else if (diseasedUrl.includes('utm' && 'http%')) {
             sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('http%'), diseasedUrl.indexOf('utm'))).split('?')[0];
           }
-        } 
-          
-          else {
-            sterilizedUrl = diseasedUrl.split('?')[0];
-          }
-          
-          copyToClipboard(sterilizedUrl);
         }
+        else {
+          alert("Sorry, This link cannot be stURLized.")
+        }
+        copyToClipboard(sterilizedUrl);
+      }
     }
 );
 

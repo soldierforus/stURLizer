@@ -65,7 +65,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
           }
         }
         
-        if (!diseasedUrl.includes('utm') && diseasedUrl.includes('https:%')) {
+        else if (!diseasedUrl.includes('utm') && diseasedUrl.includes('https:%')) {
           if (!diseasedUrl.startsWith('https://l.facebook.com')) {
             sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('https:%')));
           }
@@ -86,7 +86,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         } 
         
         else {
-          sterilizedUrl = diseasedUrl.split('?')[0];
+          alert("Sorry, This link cannot be stURLized.")
         }
         return sterilizedUrl
       }
