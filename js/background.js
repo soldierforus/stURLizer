@@ -83,7 +83,12 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
           else if (diseasedUrl.includes('utm' && 'http%')) {
             sterilizedUrl = decodeURIComponent(diseasedUrl.substring(diseasedUrl.indexOf('http%'), diseasedUrl.indexOf('utm'))).split('?')[0];
           }
-        } 
+        }
+         
+        //no operation for links that are already clean
+        else if (diseasedUrl.includes('https://') || diseasedUrl.includes('http://') && !diseasedUrl.includes('utm')) {
+          sterilizedUrl = diseasedUrl
+        }
         
         else {
           alert("Sorry, This link cannot be stURLized.")

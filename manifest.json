@@ -1,6 +1,6 @@
 {
   "name": "stURLizer",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Rid query parameters from page URLs and links, copy them to the clipboard, or open the cleaned link in a new tab",
   "manifest_version": 3,
   "background": {
