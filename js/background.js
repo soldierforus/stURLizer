@@ -86,7 +86,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         }
          
         //no operation for links that are already clean
-        else if (diseasedUrl.includes('https://') || diseasedUrl.includes('http://') && !diseasedUrl.includes('utm')) {
+        else if ((diseasedUrl.includes('https://') && !diseasedUrl.includes('utm')) || (diseasedUrl.includes('http://') && !diseasedUrl.includes('utm'))) {
           sterilizedUrl = diseasedUrl
         }
         
