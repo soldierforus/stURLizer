@@ -87,18 +87,26 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
          
         //no operation for links that are already clean
         else if ((diseasedUrl.includes('https://') && !diseasedUrl.includes('utm')) || (diseasedUrl.includes('http://') && !diseasedUrl.includes('utm'))) {
-          sterilizedUrl = diseasedUrl
+          sterilizedUrl = diseasedUrl.split('?')[0]
         }
         
         else {
-          alert("Sorry, This link cannot be stURLized.")
+          sterilizedUrl = '';
         }
+        
         return sterilizedUrl
       }
      //open new tab using the sterilized link
-     chrome.tabs.create({
-        url: getSterilizedUrl(info.linkUrl)
+     let sterilizedUrl = getSterilizedUrl(info.linkUrl);
+     if(sterilizedUrl !== '' || undefined) {
+       chrome.tabs.create({
+          url: sterilizedUrl
+       });
+     } else {
+      chrome.tabs.create({
+        url: "sorry.html"
      });
+    }
     break;
     case "pageToClipboard":
       chrome.scripting.executeScript({

@@ -34,7 +34,7 @@ chrome.runtime.onMessage.addListener(
         
         //no operation for links that are already clean
         else if ((diseasedUrl.includes('https://') && !diseasedUrl.includes('utm')) || (diseasedUrl.includes('http://') && !diseasedUrl.includes('utm'))) {
-          sterilizedUrl = diseasedUrl
+          sterilizedUrl = diseasedUrl.split('?')[0]
         }
                 
         else {
