@@ -134,6 +134,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           "48": "../images/icon48.png",
           "128": "../images/icon128.png"
       }});
-      }, 700);
+      }, 500);
   }
 });
