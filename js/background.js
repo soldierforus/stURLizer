@@ -18,7 +18,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-//listen for hotkey ctrl+shift+z
+//listen for hotkey
 chrome.commands.onCommand.addListener((command, tab) => {
   console.log(`Command "${command}" triggered`);
   chrome.scripting.executeScript({

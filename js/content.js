@@ -14,5 +14,7 @@
     const data = [new ClipboardItem({ [type]: blob })];
     
     //write to the clipboard
-    navigator.clipboard.write(data);
+    navigator.clipboard.write(data).then(function(x) {
+      alert("Link copied to clipboard: ");
+    });
 })();

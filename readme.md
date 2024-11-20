@@ -8,7 +8,7 @@ stURLizer can be installed from the chrome store: https://chrome.google.com/webs
 
 
 ## Shortcuts
-`Ctrl+Shift+H` to stURLize current page url and copy to clipboard<br/><br/><br/>
+`Ctrl+Shift+C` to stURLize current page url and copy to clipboard.  On MacOS: `Ctrl+Shift+C`<br/><br/><br/>
 
 
 
@@ -31,3 +31,8 @@ Works with facebook!  Right click a post and opening in a new tab using stURLize
 
 ## Privacy
 stURLizer does not have ads or share user's data. It is fully open-source: https://github.com/soldierforus/stURLizer
+
+## Coming soon
+
+ - When href cannot be sterlized, but the a.innerHTML starts w/ 'https' use a.innerHTML
+ - Shortcut Support
