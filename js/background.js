@@ -116,3 +116,24 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
     break;
   }
 })
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === "changeIcon") {
+      // Change the extension icon
+      chrome.action.setIcon({ path: {
+          "16": "../images/success16.png",
+          "32": "../images/success32.png",
+          "48": "../images/success48.png",
+          "128": "../images/success128.png"
+      }});
+      
+      setTimeout(() => {
+        chrome.action.setIcon({ path: {
+          "16": "../images/icon16.png",
+          "32": "../images/icon32.png",
+          "48": "../images/icon48.png",
+          "128": "../images/icon128.png"
+      }});
+      }, 700);
+  }
+});

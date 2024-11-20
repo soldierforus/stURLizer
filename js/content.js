@@ -15,6 +15,6 @@
     
     //write to the clipboard
     navigator.clipboard.write(data).then(function(x) {
-      alert("Link copied to clipboard: ");
+      chrome.runtime.sendMessage({ action: "changeIcon" });
     });
 })();
