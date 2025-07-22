@@ -1,13 +1,18 @@
 //initiate service worker & context menu on installation
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('Service Worker Active'); 
+  console.log('Service Worker Active');
+    chrome.contextMenus.create({
+    "title": 'About',
+    "contexts": ["page"],
+    "id": "about"
+  });
   chrome.contextMenus.create({
     "title": 'Copy this link to clipboard',
     "contexts": ["link"],
     "id": "linkToClipboard"
   });
   chrome.contextMenus.create({
-    "title": 'Open this link in a new tab',
+    "title": 'Open this link in a new tab (beta)',
     "contexts": ["link"],
     "id": "linkToTab"
   });
@@ -37,6 +42,11 @@ chrome.action.onClicked.addListener((tab) => {
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   switch (info.menuItemId) {
+    case "about":
+      chrome.tabs.create({
+        url: "html/about.html"
+     });
+    break;
     case "linkToClipboard":
       //send message to linkToClipboard,js with the link url
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -104,7 +114,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
        });
      } else {
       chrome.tabs.create({
-        url: "sorry.html"
+        url: "html/sorry.html"
      });
     }
     break;

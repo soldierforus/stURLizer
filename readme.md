@@ -33,6 +33,6 @@ Works with facebook!  Right click a post and opening in a new tab using stURLize
 stURLizer does not have ads or share user's data. It is fully open-source: https://github.com/soldierforus/stURLizer
 
 ## Coming soon
-
- - When href cannot be sterlized, but the a.innerHTML starts w/ 'https' use a.innerHTML
- - Shortcut Support
+ - Report a Link button - report broken links without emailing
+ - Check a link before opening in new tab
+ - Custom Rules for links
